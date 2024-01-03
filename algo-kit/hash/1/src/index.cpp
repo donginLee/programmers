@@ -24,3 +24,4 @@ string solution(vector<string> participant, vector<string> completion) {
     return answer;
 
 }
+// 10분
