@@ -10,7 +10,7 @@ string solution(vector<string> participant, vector<string> completion) {
     
     for(int i=0;i<participant.size();i++){
         string name = participant.at(i);
-        
+        cout<<table[name]<<" "<<table[name]<<"\n";
         if(!table[name]) table[name]=1;
         else table[name]++;
     }
