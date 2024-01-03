@@ -1,0 +1,5 @@
+1. map 순회할 때
+map<string,int> table;
+for(map<string,int>::iterator iter = table.begin();iter!=table.end();iter++){
+        if(iter->second == 1){answer = iter->first; break;}
+    }
