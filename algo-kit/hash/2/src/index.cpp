@@ -1,6 +1,7 @@
 #include <vector>
 #include <map>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int solution(vector<int> nums)
@@ -11,13 +12,12 @@ int solution(vector<int> nums)
     
     for(int i=0;i<nums.size();i++){
         int count= nums.at(i);
-        if(!number[count])number[count]=1;
-        else number[count]++;
+        number[count]++;
     }
-    if(n/2>=number.size()){
-        answer = number.size();
-    }
-    else answer = n/2;
+    answer = min(n/2,(int)number.size());
+    // min / max는 algorithm 헤더 include
+    // size는 int가 아니라 unsigned_long임
+    // 형변환은 앞에 (자료형) 붙여주기 ex) (int) a;
     return answer;
 }
 
